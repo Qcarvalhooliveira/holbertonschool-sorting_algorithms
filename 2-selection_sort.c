@@ -18,4 +18,17 @@ void selection_sort(int *array, size_t size)
     if (min != i)
       swap(&array[i], &array[min]);
   }
-} 
+}
+
+/**
+ * swap - Swaps two elements in an array.
+ * @i:The first element.
+ * @j: The second element.
+ * Return: nothing.
+ */
+void swap(int *i, int *j)
+{
+  int temp = *i;
+  *i = *j;
+  *j = temp;
+}
