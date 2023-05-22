@@ -6,9 +6,9 @@
  * @j: The second element.
  * Return: nothing.
  */
-void swap(int *array, int i, int j)
+void swap(int *i, int *j)
 {
-	int temp = array[i];
-	array[i] = array[j];
-	array[j] = temp;
+	int temp = *i;
+	*i = *j;
+	*j = temp;
 }
