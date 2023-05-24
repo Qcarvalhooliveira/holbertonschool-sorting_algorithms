@@ -43,7 +43,7 @@ void insertion_sort_list(listint_t **list)
 		while (current != NULL && current->prev != NULL)
 		{
 			if (current->prev->n > current->n)
-			{	
+			{
 			swap_node(current->prev, current);
 
 			if (current->prev == NULL)
