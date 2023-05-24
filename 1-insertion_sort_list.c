@@ -28,15 +28,17 @@ void swap_node(listint_t *a, listint_t *b)
  */
 void insertion_sort_list(listint_t **list)
 {
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	listint_t *current, *insert, *next; 
+		
+		if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	listint_t *current = (*list)->next;
+	current = (*list)->next;
 
 	while (current != NULL)
 	{
-		listint_t *insert = current->prev;
-		listint_t *next = current->next;
+		insert = current->prev;
+		next = current->next;
 
 		while (insert != NULL && insert->n > current->n)
 		{
