@@ -7,7 +7,7 @@
 */
 void selection_sort(int *array, size_t size)
 {
-  size_t i, j, min;
+  size_t i, j, min, temp;
   
   for (i = 0; i < size - 1; i++)
   {
@@ -18,19 +18,11 @@ void selection_sort(int *array, size_t size)
         min = j;
       }
         if (min != i)
-          swap(&array[i], &array[min]);
+	{
+		temp = array[min];
+		array[min] = array[i];
+		array[i] = temp;
+		print_array(array, size);
+	}
   }
-}
-
-/**
- * swap - Swaps two elements in an array.
- * @i:The first element.
- * @j: The second element.
- * Return: nothing.
- */
-void swap(int *i, int *j)
-{
-  int temp = *i;
-  *i = *j;
-  *j = temp;
 }
